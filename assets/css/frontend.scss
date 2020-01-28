@@ -1,0 +1,408 @@
+// External dependencies
+@import '~bootstrap-grid-only-css/scss/bootstrap-grid';
+@import 'components/selectric';
+@import 'auto-icons';
+// Helpers
+@import 'variables/colours';
+@import 'variables/grid';
+// Components
+@import 'components/input-increment';
+@import 'components/input-dropdown';
+@import 'components/input-options';
+@import 'components/input-options-vertical';
+@import 'components/input-autok';
+@import 'components/input-range';
+@import 'components/input-checkbox';
+@import 'components/forms';
+@import 'components/buttons';
+
+//bootstrap-wrapper
+.cegauto-kalkulator {
+  color: $cak-dark;
+  font-family: 'Open Sans', sans-serif !important;
+  width: 100%;
+  position: relative;
+
+  //inner container
+  &-inner {
+    padding-top: $cak-spacer-x;
+
+    .cegauto-header {
+      margin-bottom: 24px;
+
+      &.onero {
+        @media (max-width: 575px) {
+          margin-bottom: 60px;
+        }
+      }
+    }
+
+    //INPUT SECTION
+    .input-section {
+      .input-section-title {
+        margin-top: 0;
+        margin-bottom: $cak-spacer-x;
+        font-size: 1.25rem;
+        color: $section-title-color;
+
+        @media (min-width: 576px) {
+          font-size: 1.45rem;
+        }
+
+        @media (min-width: 768px) {
+          font-size: 1.65rem;
+        }
+
+        @media (min-width: 992px) {
+          font-size: 1.8rem;
+        }
+      }
+
+      //INPUTS (row)
+      .cegauto-inputs {
+        justify-content: center;
+        margin-right: 0;
+        margin-left: 0;
+
+        //cols
+        .cegauto-input {
+          padding-left: 5px;
+          padding-right: 5px;
+          margin-bottom: 24px;
+
+          &.mb {
+            margin-bottom: 12px;
+          }
+
+          &.no-mb {
+            @media (min-width: 768px) {
+              margin-bottom: 0;
+            }
+          }
+
+          &-inner {
+            background-color: $cak-secondary;
+            color: $cak-dark;
+            padding: 15px;
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+            border-radius: 5px;
+
+            .cegauto-input-title {
+              margin: 0;
+              text-align: center;
+              line-height: 1.5;
+              font-size: 1rem;
+
+              @media (min-width: 576px) {
+                font-size: 1.1rem;
+              }
+
+              @media (min-width: 768px) {
+                font-size: 1.2rem;
+              }
+
+              .muted {
+                font-weight: normal;
+              }
+            }
+
+            .cegauto-input-subtitle {
+              text-align: center;
+              margin: 0;
+            }
+
+            .cegauto-if-outer {
+              //flex
+              flex-grow: 1;
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+              justify-content: flex-end;
+            }
+          }
+        }
+      }
+
+      .price-note {
+        text-align: center;
+        padding-top: 12px;
+        margin-bottom: 0;
+        flex: 1;
+        line-height: 1.4 !important;
+        font-family: 'Open Sans', sans-serif !important;
+      }
+    }
+
+    //PRICE
+    .cegauto-price {
+      height: 100%;
+
+      .price-packages {
+        justify-content: center;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+
+        .price-package {
+          flex: 1;
+
+          &.dark {
+            background-color: $cak-darker;
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            display: flex;
+          }
+
+          &.primary {
+            background-color: $cak-primary;
+          }
+
+          &.light {
+            background-color: $cak-light;
+            border-top-left-radius: 5px;
+            border-top-right-radius: 5px;
+          }
+
+          &-inner {
+            color: #fff;
+            height: 100%;
+            padding: 15px $cak-spacer-x;
+            //flex
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .package-name {
+              margin: 0;
+              text-align: center;
+              font-size: 22px;
+              font-weight: 400;
+              font-family: 'Open Sans', sans-serif !important;
+              color: white!important;
+
+              @media (min-width: 576px) {
+                font-size: 22px;
+              }
+
+              @media (min-width: 768px) {
+                font-size: 23px;
+              }
+
+              @media (min-width: 992px) {
+                font-size: 24px;
+              }
+            }
+
+            .package-price {
+              margin-bottom: 0;
+              font-size: 28px;
+              font-weight: 700;
+              text-align: center;
+              display: flex;
+              justify-content: center;
+
+              @media (min-width: 576px) {
+                font-size:28px;
+              }
+
+              @media (min-width: 768px) {
+                font-size: 30px;
+              }
+
+              @media (min-width: 992px) {
+                font-size: 36px;
+              }
+
+              span {
+                font-weight: 400;
+                font-size: 20px;
+              }
+            }
+
+            .package-small-price {
+              margin-bottom: 0;
+              font-size: 22px;
+              font-weight: 400;
+              text-align: center;
+
+              @media (min-width: 576px) {
+                font-size: 22px;
+              }
+
+              @media (min-width: 768px) {
+                font-size: 22px;
+              }
+
+              @media (min-width: 992px) {
+                font-size: 24px;
+              }
+            }
+
+            .cta-text {
+              text-align: center;
+              margin-top: 12px;
+              line-height: 1;
+              margin-bottom: 0;
+            }
+          }
+        }
+      }
+
+      .price-notice {
+        text-align: center;
+        color: $section-title-color;
+        max-width: 550px;
+        margin: 0 auto;
+        font-size: 0.75rem;
+        font-weight: normal;
+      }
+
+      //cta
+      .price-cta {
+        text-align: center;
+        color: $section-title-color;
+        max-width: 550px;
+        margin: 30px auto;
+        font-size: 1rem;
+
+        @media (min-width: 576px) {
+          font-size: 1.1rem;
+        }
+
+        @media (min-width: 768px) {
+          font-size: 1.2rem;
+        }
+
+        @media (min-width: 992px) {
+          font-size: 1.3rem;
+        }
+      }
+    }
+
+    //FORM (wrapper)
+    .cegauto-form-wrapper {
+      padding: 24px 0;
+
+      .form-title {
+        margin-top: 0;
+        margin-bottom: 24px;
+        font-size: 1.25rem;
+        color: $section-title-color;
+        font-weight: 700 !important;
+        font-family: 'Open Sans', sans-serif !important;
+
+        @media (min-width: 576px) {
+          font-size: 1.45rem;
+        }
+
+        @media (min-width: 768px) {
+          font-size: 1.65rem;
+        }
+
+        @media (min-width: 992px) {
+          font-size: 1.8rem;
+        }
+      }
+
+      //form
+      .cegauto-form {
+        //body
+        .form-body {
+          //row
+          .form-items {
+            justify-content: center;
+            margin-right: 0;
+            margin-left: 0;
+
+            //cols
+            .form-col {
+              padding-left: 5px;
+              padding-right: 5px;
+              margin-bottom: 10px;
+
+              //cols inner
+              .form-item {
+                width: 100%;
+                border-radius: 5px;
+                padding: 10px;
+                font-weight: normal;
+                font-size: 1rem;
+                color: $cak-dark;
+                border: none;
+                outline: none;
+                background-color: $cak-secondary;
+                line-height: 2;
+                height: auto !important;
+              }
+            }
+          }
+        }
+
+        //footer
+        .form-footer {
+          margin-top: 15px;
+
+          //row
+          .form-footer-items {
+            justify-content: center;
+            margin-left: 0;
+            margin-right: 0;
+
+            //checkboxes - col
+            .form-checkboxes {
+              .form-checkboxes-inner {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                margin-left: 10px;
+                //height: 100%;
+              }
+            }
+
+            //submit - col
+            .form-submit {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+
+              @media (max-width: 767.98px) {
+                margin-top: $cak-spacer-x;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .loader {
+    background: rgba(#fff, 0.7);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    bottom: 0;
+    right: 0;
+    z-index: 999;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+
+  .error {
+    background-color: #8b162b;
+    color: white;
+    padding: 12px 20px;
+    margin: 24px 0;
+    display: none;
+
+    &.show {
+      display: block;
+    }
+  }
+}

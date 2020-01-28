@@ -1,0 +1,45 @@
+@font-face {
+  font-family: "cegautoberlet";
+  src: url("../fonts/cegautoberlet.eot?973bded682f972c44daff7d96ad92402?#iefix") format("embedded-opentype"),
+  url("../fonts/cegautoberlet.woff2?973bded682f972c44daff7d96ad92402") format("woff2"),
+  url("../fonts/cegautoberlet.woff?973bded682f972c44daff7d96ad92402") format("woff");
+}
+
+.cak-icon {
+  line-height: 1;
+}
+
+.cak-icon:before {
+  font-family: cegautoberlet, serif !important;
+  font-style: normal;
+  font-weight: normal !important;
+  vertical-align: top;
+}
+
+.cak-icon-suv:before {
+  content: "\f101";
+}
+
+.cak-icon-kleinwagen:before {
+  content: "\f102";
+}
+
+.cak-icon-coupe:before {
+  content: "\f103";
+}
+
+.cak-icon-minibusz:before {
+  content: "\f104";
+}
+
+.cak-icon-kombi:before {
+  content: "\f105";
+}
+
+.cak-icon-sedan:before {
+  content: "\f106";
+}
+
+.cak-icon-roadster:before {
+  content: "\f107";
+}

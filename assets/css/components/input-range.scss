@@ -1,0 +1,100 @@
+//slider
+.cegauto-input-range {
+  display: flex;
+  align-items: center;
+
+  .berletidij-slider-container {
+    position: relative;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 100px;
+
+    .berletidij-slider {
+      width: 100%;
+      //override appearance
+      appearance: none;
+      -webkit-appearance: none;
+      outline: none;
+      border: none;
+      background: darken(#eeeeee, 15%);
+      height: 15px;
+      margin: 0;
+      border-radius: 5px;
+
+      &::-ms-track {
+        width: 100%;
+        height: 15px;
+        background: transparent;
+        color: transparent;
+      }
+
+      &::-ms-fill-lower {
+        background: $cak-primary;
+      }
+
+      &::-ms-fill-upper {
+        background: $cak-white;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none;
+        height: 30px;
+        width: 20px;
+        background: $cak-primary;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      &::-moz-range-thumb {
+        border: none;
+        height: 30px;
+        width: 20px;
+        background: $cak-primary;
+        cursor: pointer;
+      }
+
+      &::-ms-thumb {
+        border: none;
+        height: 15px;
+        width: 15px;
+        background: $cak-primary;
+        cursor: pointer;
+      }
+
+      &::-ms-tooltip {
+        display: none;
+      }
+    }
+
+    output {
+      position: absolute;
+      background: $cak-primary;
+      width: 45px;
+      height: 35px;
+      text-align: center;
+      color: $cak-white;
+      font-size: 1rem;
+      display: inline-block;
+      bottom: 175%;
+      left: 0;
+      padding-top: 4px;
+      font-weight: 600;
+      border-radius: 5px;
+    }
+
+    output:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 0;
+      border-top: 10px solid $cak-primary;
+      border-left: 5px solid transparent;
+      border-right: 5px solid transparent;
+      top: 100%;
+      left: 50%;
+      margin-left: -5px;
+      margin-top: -1px;
+    }
+  }
+}

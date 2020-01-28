@@ -1,0 +1,138 @@
+$radio-icon-width: 140px;
+$checkmark-size: 15px;
+
+.autok-wrapper {
+  height: auto !important;
+
+  .autok-inner {
+  }
+
+  .autok-title {
+    font-family: 'Open Sans', sans-serif !important;
+    font-weight: 700 !important;
+    margin-bottom: 10px !important;
+  }
+
+  .autok-if-outer {
+    .cegauto-input-autok {
+      display: flex;
+      width: 100%;
+
+      @media (min-width: 768px) {
+        flex-direction: column;
+      }
+
+      .cegauto-options {
+        @media (min-width: 768px) {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+      }
+
+      //radio button container
+      .radio-btn {
+        display: block;
+        position: relative;
+        cursor: pointer;
+        user-select: none;
+        padding-left: 22px;
+        margin-top: 25px;
+
+        @media (min-width: 768px) {
+          padding-left: 0;
+          padding-top: 25px;
+          width: $radio-icon-width;
+        }
+
+        @media (min-width: 992px) {
+          width: 100px;
+        }
+
+        .display-value {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          @media (min-width: 768px) {
+            flex-direction: column;
+          }
+
+          .dv-title {
+            margin-left: 5px;
+            margin-bottom: 0;
+            color: $cak-dark;
+            font-size: 1rem;
+            text-align: center;
+            font-family: 'Open Sans', sans-serif !important;
+
+            @media (min-width: 576px) {
+              font-size: 1rem;
+            }
+
+            @media (min-width: 992px) {
+              font-size: 1rem;
+            }
+          }
+
+          .cak-icon {
+            &:before {
+              //actual icon styling
+              color: $cak-primary;
+              font-size: 2rem;
+            }
+          }
+        }
+
+        //hide browser default radio button
+        input {
+          position: absolute;
+          opacity: 0;
+          cursor: pointer;
+          height: 0;
+          width: 0;
+
+          //show checked indicator when checked
+          &:checked ~ .checkmark:after {
+            display: none;
+          }
+        }
+
+        //custom radio button
+        .checkmark {
+          position: absolute;
+          top: 6px;
+          left: 0;
+          height: $checkmark-size;
+          width: $checkmark-size;
+          background-color: $cak-primary;
+          border-radius: 50%;
+
+          @media (min-width: 768px) {
+            top: 0;
+            left: ($radio-icon-width -$checkmark-size)/ 2;
+          }
+
+          @media (min-width: 992px) {
+            left: 46px
+          }
+
+          //checked indicator
+          &:after {
+            content: '';
+            position: absolute;
+            display: block;
+            top: 3px;
+            left: 3px;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background: $cak-secondary;
+          }
+        }
+      }
+    }
+  }
+}
+
+

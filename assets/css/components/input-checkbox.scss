@@ -1,0 +1,63 @@
+.form-checkboxes-inner {
+  //checkbox container
+  .checkbox-btn {
+    //label styling
+    color: $section-title-color !important;
+    font-weight: normal;
+    font-size: 1rem;
+    //checkmark styling
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-left: 30px; //gives actual space for the checkmark
+    margin-bottom: 10px;
+
+    &:hover input ~ .checkmark {
+      background-color: darken($cak-primary, 10%);
+    }
+
+    //hide browser default checkbox
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      //show checked indicator when checked
+      &:checked ~ .checkmark:after {
+        display: block;
+      }
+    }
+
+    //custom checkbox
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 20px;
+      width: 20px;
+      background-color: $cak-primary;
+
+      //checked indicator
+      &:after {
+        content: '';
+        position: absolute;
+        display: none;
+        left: 7px;
+        top: 4px;
+        width: 6px;
+        height: 12px;
+        border: solid $cak-secondary;
+        border-width: 0 3px 3px 0 !important;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+      }
+    }
+  }
+}

@@ -1,0 +1,23 @@
+.cegauto-input-increment {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 390px;
+  justify-content: space-between;
+  align-items: center;
+
+  .inc-val {
+    display: flex;
+    font-size: 1.1rem;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 34px;
+    background-color: $cak-white;
+    font-weight: 600;
+
+    .inc-val-unit {
+      margin-left: 5px;
+    }
+  }
+}

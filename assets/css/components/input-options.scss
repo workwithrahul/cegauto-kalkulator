@@ -1,0 +1,81 @@
+#futamido-display-curr-val {
+  margin-bottom: 3px;
+}
+
+.cegauto-input-options {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+
+  //radio button container
+  .radio-btn {
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding-right: 15px; //gives actual space for the checkmark
+
+    //spacings
+    + .radio-btn {
+      margin-left: 7px;
+
+      @media (min-width: 325px) {
+        margin-left: 15px;
+      }
+    }
+
+    //hide browser default radio button
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      //show checked indicator when checked
+      &:checked ~ .checkmark:after {
+        display: none;
+      }
+    }
+
+    //custom radio button
+    .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 15px;
+      width: 15px;
+      background-color: $cak-primary;
+      border-radius: 50%;
+
+      //checked indicator
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 3px;
+        left: 3px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: $cak-secondary;
+      }
+    }
+  }
+}
+
+#futamido-display-values {
+  .display-val {
+    //spacings
+    + .display-val {
+      margin-left: 2px;
+
+      @media (min-width: 325px) {
+        margin-left: 10px;
+      }
+    }
+  }
+}

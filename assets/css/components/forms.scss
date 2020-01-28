@@ -1,0 +1,46 @@
+.cegauto-form {
+  select,
+  textarea,
+  input[type="text"],
+  input[type="password"],
+  input[type="datetime"],
+  input[type="datetime-local"],
+  input[type="date"],
+  input[type="month"],
+  input[type="time"],
+  input[type="week"],
+  input[type="number"],
+  input[type="email"],
+  input[type="url"],
+  input[type="search"],
+  input[type="tel"],
+  input[type="color"] {
+    appearance: none;
+  }
+
+  // Textarea
+  textarea {
+    resize: vertical;
+  }
+
+  select::-ms-expand {
+    display: none;
+  }
+
+  .must-fill-star {
+    color: red;
+  }
+
+  // Placeholders
+  input::-webkit-input-placeholder { /* Edge */
+    color: rgba($cak-dark, 0.8);
+  }
+
+  input:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: rgba($cak-dark, 0.8);
+  }
+
+  input::placeholder {
+    color: rgba($cak-dark, 0.8);
+  }
+}

@@ -1,0 +1,66 @@
+.cegauto-input-options-vertical {
+  display: flex;
+  width: 100%;
+
+  .cegauto-options {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @media (min-width: 576px) {
+      flex-direction: row;
+    }
+  }
+
+  //radio button container
+  .radio-btn {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    padding: 0 22px; //gives actual space for the checkmark
+    font-size: 1rem;
+
+    //hide browser default radio button
+    input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+
+      //show checked indicator when checked
+      &:checked ~ .checkmark:after {
+        display: none;
+      }
+    }
+
+    //custom radio button
+    .checkmark {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      height: 15px;
+      width: 15px;
+      background-color: $cak-primary;
+      border-radius: 50%;
+
+      //checked indicator
+      &:after {
+        content: '';
+        position: absolute;
+        display: block;
+        top: 3px;
+        left: 3px;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        background: $cak-secondary;
+      }
+    }
+  }
+}

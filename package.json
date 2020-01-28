@@ -1,0 +1,53 @@
+{
+  "name": "cegauto-kalkulator",
+  "version": "1.0.0",
+  "description": "Ajánlat generálás a megadott adatok alapján.",
+  "private": true,
+  "scripts": {
+    "watch": "webpack --mode=development --watch --config webpack.config.js",
+    "build": "webpack --mode=development --progress --config webpack.config.js",
+    "build:production": "webpack --mode=production --progress --config webpack.config.js"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://opensource.org/licenses/MIT"
+    }
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git@bitbucket.org/honlapvarazslo/cegauto-kalkulator.git"
+  },
+  "author": "Richard Szegh <szeghr@honlapvarazslo.com>",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "android 4",
+    "opera 12",
+    "Safari >= 6",
+    "iOS >= 6"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.4.4",
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "autoprefixer": "^9.5.1",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "eslint": "^6.0.1",
+    "file-loader": "^4.0.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "node-sass": "^4.12.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "url-loader": "^2.0.1",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2"
+  },
+  "dependencies": {
+    "bootstrap-grid-only-css": "^4.1.3",
+    "jquery": "^3.4.1",
+    "selectric": "^1.13.0"
+  }
+}

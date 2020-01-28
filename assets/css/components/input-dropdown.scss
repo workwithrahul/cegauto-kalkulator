@@ -1,0 +1,20 @@
+.cegauto-input-dropdown {
+  width: 100%;
+}
+
+select {
+  background-color: #eee;
+  width: 100%;
+  height: 48px;
+  border-radius: 5px;
+  font-weight: normal;
+  font-size: 1rem;
+  color: #151515;
+  border: 1px solid transparent !important;
+  outline: none;
+  line-height: 2;
+
+  option[value=""] {
+    color: rgba($cak-dark, 0.8);
+  }
+}

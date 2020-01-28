@@ -1,0 +1,73 @@
+#cak_frontend {
+  .cak-btn-primary {
+    //regular button styling
+    //border-radius: 0;
+    transition: 0.3s;
+    background: $cak-primary;
+    font-weight: bold;
+    padding: 10px 15px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $cak-white;
+    font-size: 1rem;
+    line-height: 1;
+    border-radius: 5px;
+
+    &:hover {
+      background-color: darken($cak-primary, 10%);
+    }
+
+    &:disabled {
+      background-color: rgba($cak-primary, 0.5);
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  .cak-btn-secondary {
+    border-radius: 0;
+    transition: 0.3s;
+    padding: 20px $cak-spacer-x;
+    font-weight: bold;
+    background: $cak-primary;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: $cak-white;
+    font-size: 1rem;
+    line-height: 1;
+    box-shadow: none;
+
+    &:hover,
+    &:focus {
+      box-shadow: inset 15em 0 0 0 darken($cak-primary, 10%);
+    }
+
+    &:disabled {
+      background-color: rgba($cak-primary, 0.5);
+      cursor: default;
+      pointer-events: none;
+    }
+  }
+
+  .cak-cta {
+    background-color: $cak-blue;
+    color: white;
+    font-weight: 600;
+    padding: 24px 0;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease 0s;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: darken($cak-blue, 5);
+    }
+  }
+}
